@@ -13,7 +13,7 @@ import kotlinx.coroutines.flow.onEach
 import javax.inject.Inject
 
 @HiltViewModel
-class TriviaViewModel @Inject constructor(
+class TvProgramViewModel @Inject constructor(
     private val getTvProgramRepo: GetTvProgramRepo
 ) : ViewModel() {
 
