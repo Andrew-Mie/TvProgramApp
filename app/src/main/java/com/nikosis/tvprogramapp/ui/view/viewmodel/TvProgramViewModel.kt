@@ -28,7 +28,7 @@ class TvProgramViewModel @Inject constructor(
         getTvProgramRepo().onEach { results ->
             when (results) {
                 is Resources.Success -> {
-                    _state.value = GetTvProgramRepoState(tvProgramLoaded = results.data)
+                    _state.value = GetTvProgramRepoState(tvProgramLoaded = results.data ?: emptyList())
                 }
                 is Resources.Loading -> {
                     _state.value = GetTvProgramRepoState(isLoading = true)
