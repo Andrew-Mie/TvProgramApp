@@ -11,5 +11,5 @@ data class TvProgramDrm(
     val progressPercent: Int,
     val startTimeDateRaw: String,
     val title: String,
-    val type: String
+    val type: String,
 )

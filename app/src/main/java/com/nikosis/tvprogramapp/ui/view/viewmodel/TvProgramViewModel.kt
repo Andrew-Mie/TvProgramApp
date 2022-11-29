@@ -13,7 +13,7 @@ import kotlinx.coroutines.flow.onEach
 import javax.inject.Inject
 
 @HiltViewModel
-class TriviaViewModel @Inject constructor(
+class TvProgramViewModel @Inject constructor(
     private val getTvProgramRepo: GetTvProgramRepo
 ) : ViewModel() {
 
@@ -31,7 +31,7 @@ class TriviaViewModel @Inject constructor(
                     _state.value = GetTvProgramRepoState(tvProgramLoaded = results.data)
                 }
                 is Resources.Loading -> {
-                    _state.value = GetTvProgramRepoState(isLoading = true )
+                    _state.value = GetTvProgramRepoState(isLoading = true)
                 }
                 is Resources.Error -> {
                     _state.value = GetTvProgramRepoState(
