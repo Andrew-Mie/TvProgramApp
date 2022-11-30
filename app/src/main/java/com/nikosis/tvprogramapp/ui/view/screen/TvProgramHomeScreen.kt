@@ -32,11 +32,11 @@ fun TvProgramHomeScreen(viewModel: TvProgramViewModel = hiltViewModel()) {
                     state.tvProgramLoaded.sortedByDescending { it.progressPercent }
                 ) { x ->
                     TvProgramCard(
-                        endTime = x.endTimeDateRaw,
+                        endTime = x.endTimeDateRaw.drop(11).dropLast(18),
                         imageUrl = x.imageUrl,
                         isFavourite = x.isFavourite,
                         progressPercent = x.progressPercent,
-                        startTime = x.startTimeDateRaw,
+                        startTime = x.startTimeDateRaw.drop(11).dropLast(18),
                         title = x.title,
                         type = x.type
                     )
