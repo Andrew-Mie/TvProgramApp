@@ -1,5 +1,6 @@
 package com.nikosis.tvprogramapp.ui.view.viewmodel
 
+import androidx.compose.runtime.State
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -17,7 +18,7 @@ class TvProgramViewModel @Inject constructor(
 ) : ViewModel() {
 
     private val _state = mutableStateOf(GetTvProgramRepoState())
-    //val state: State<GetTvProgramRepoState> = _state
+    val state: State<GetTvProgramRepoState> = _state
 
     init {
         getTvProgramVM()

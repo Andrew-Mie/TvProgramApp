@@ -34,7 +34,7 @@ fun TvProgramCard(
     Card(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(4.dp),
+            .padding(2.dp),
         shape = RoundedCornerShape(corner = CornerSize(4.dp)),
         elevation = 6.dp
     ) {
@@ -44,8 +44,8 @@ fun TvProgramCard(
         ) {
             Surface(
                 modifier = Modifier
-                    .padding(12.dp)
-                    .size(90.dp),
+                    .padding(10.dp)
+                    .size(40.dp),
                 shape = RectangleShape,
                 elevation = 4.dp
             ) {
@@ -81,6 +81,10 @@ fun TvProgramCard(
                     overflow = TextOverflow.Ellipsis,
                     color = Color.LightGray
                 )
+                Spacer(modifier = Modifier.size(7.dp))
+                LinearProgressIndicator(progress = progressPercent.toFloat()/100,
+                    modifier = Modifier.fillMaxWidth()
+                )
             }
         }
     }
@@ -88,7 +92,7 @@ fun TvProgramCard(
 
 @Preview
 @Composable
-fun Preview_TriviaItemCard() {
+fun TvProgramCardPreview() {
 
     TvProgramCard(
         title = "Test",
@@ -96,7 +100,7 @@ fun Preview_TriviaItemCard() {
         endTime = "12:20",
         imageUrl = "",
         isFavourite = true,
-        progressPercent = 20,
+        progressPercent = 92,
         type = "Comedy"
     )
 
